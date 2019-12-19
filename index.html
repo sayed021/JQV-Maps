@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>runing | Home </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>    
+    <script type="text/javascript" src="js/jquery.vmap.min.js"></script>
+    <script type="text/javascript" src="js/maps/jquery.vmap.usa.js"></script>
+
+    <link rel="stylesheet" href="css/jqvmap.css" />
+
+    <style>
+      #map1 {
+        height: 500px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+</head>
+<body class="loading">
+	<div id="wrapper"><!--start wrapper-->
+        <div class="container"><!--start container-->
+            <div class="center-content">
+                <div id="map1" ></div>
+            </div>
+        </div><!--start container-->
+	</div><!--//end #wrapper-->
+
+    <script>
+      // jQuery(document).ready(function () {
+        jQuery('#map1').vectorMap({
+          map: 'usa_en',
+          enableZoom: true,
+          showTooltip: true,
+          backgroundColor: null,
+          selectedColor: "#00ffff",
+          color: '#116B80',
+          hoverColor: '#902828',
+          colors: {
+            mo: '#D15A5A',
+            fl: '#D15A5A',
+            or: '#D15A5A',
+            tx: '#000000'
+          },
+          onRegionClick: function(event, code, region){
+            // console.log(jQuery(this.event));
+            // alert(jQuery(this));
+            // event.preventDefault();
+          }
+        });
+      // });
+    </script>
+
+</body>
+</html>
